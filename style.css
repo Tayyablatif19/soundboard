@@ -1,0 +1,150 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero section styles */
+.hero {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Style the hero text */
+.hero-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Center the friend image */
+#friend-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px); /* Adjust as needed to center the image */
+}
+
+#friend-image {
+    width: 250px;
+    height: 500px;
+    cursor: pointer;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 0; /* Reduce hero section padding for smaller screens */
+    }
+
+    .hero-text {
+        font-size: 1.5rem; /* Decrease font size for smaller screens */
+    }
+
+    #friend-container {
+        min-height: auto; /* Remove minimum height for smaller screens */
+    }
+
+    #friend-image {
+        width: 250px;
+        height: 500px;
+    }
+}
+
+/* Adjust styles for even smaller screens if needed */
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 1.2rem;
+    }
+
+    #friend-image {
+        width: 250px;
+        height: 500px;
+    }
+}
+
+/* ... Existing CSS styles ... */
+
+/* Navigation bar styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hamburger menu styles for smaller screens */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 95px;
+        padding: 10px;
+        right: 0px;
+        /* border: 2px solid grey; */
+        border-radius: 2px;
+        z-index: 1;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
